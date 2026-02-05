@@ -12,4 +12,4 @@ class Car:
         print("Car is started ....")
 
 car1=Car()
-car1.start() # the internal process is hide. so, it is abstraction which hide unnecessary data
+car1.start() # the internal process is hide. so, it is an abstraction which hide unnecessary data
