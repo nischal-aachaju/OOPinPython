@@ -12,7 +12,9 @@ class Student:
         average=self.total/3
         average=round(average,2)
         return average
-
+    @staticmethod
+    def hello():
+        print("hello, students")
 s1=Student("Nischal",96,91,90)
 print(s1.name)
 print(s1.average_marks())
@@ -20,3 +22,5 @@ print(s1.average_marks())
 s1.name="Nirjal"
 print(s1.name)
 print(s1.average_marks())
+
+print(s1.hello())
