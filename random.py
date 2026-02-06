@@ -19,3 +19,29 @@ print((True+True)&True)
 a=list(range(1,4))
 print(a)
 
+print("{0}:{a}".format(0,a=12))
+
+# a=complex(input("enter number"))
+a=12+5j
+print(a)
+print(type(a))
+
+a=-5
+
+if a<-10:
+    
+    print("hge")
+else:
+    print("oiyt")
+    
+if not 1:
+    print("D")
+else:
+    print("s")
+    
+import time
+
+time.sleep(2)
+print("SDf")
+time.sleep(5)
+print("etre")
