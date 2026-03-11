@@ -2,7 +2,7 @@
 # it is used if the attributes are same for all the instances or like default attributes
 
 class User:
-    user_count=0
+    user_count=0 # static
     def __init__(self,username,email):
         self._username=username
         self._email=email

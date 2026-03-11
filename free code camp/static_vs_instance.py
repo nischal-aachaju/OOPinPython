@@ -19,7 +19,7 @@ class BankAccount:
     def __log_transaction(self,transcation_type,ammount):
         print(f"Logging {transcation_type} of ${ammount}")
        
-    @staticmethod
+    @staticmethod # instances
     def is_valid_interest_rate(rate):
         return rate>=0 and rate<=5
             
