@@ -64,11 +64,15 @@ class Bike(Vehicle):
         super().__init__(brand,model,year)
         self.number_of_wheels=number_of_wheels
 
+class Plane(Vehicle):
+    def __init__(self,brand,model,year):
+        super().__init__(brand,model,year)
 
 # list of vehicle to inspect
 vehicles=[
     Car("Ford","Mustang",2009,4,4),
-    Bike("BMW","S100RR",2022,2)
+    Bike("BMW","S100RR",2022,2),
+    Plane("Boeing","747",2010)
 
 ]
 
