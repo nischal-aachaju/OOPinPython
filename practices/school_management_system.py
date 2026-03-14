@@ -14,6 +14,8 @@ class Person:
             print("Invalid age")
     def __str__(self):
         return f"Name: {self.name}, Age: {self.get_age()}"
+    def action(self):
+        print(f"{self.name} is doing something")
         
 class Student(Person):
     
@@ -25,6 +27,8 @@ class Student(Person):
         print(f"{self.name} is studying {subject}")
     def __str__(self):
         return f"{super().__str__()}, Grade: {self.grade}"
+    def action(self):
+        self.study("Mathematics")
 
 class Teacher(Person):
     def __init__(self,name,age,subject):
@@ -34,13 +38,23 @@ class Teacher(Person):
         print(f"{self.name} is teaching {self.subject}")
     def __str__(self):
         return f"{super().__str__()}, Subject:{self.subject}" 
+    def action(self):
+        self.teach()
         
 
-s1=Student("Nischal", 19, "Bachelor 1st year")
-t1=Teacher("Norman",22,"Programing")
-print(s1)
-s1.study("Mathematices")
-print(t1)
-t1.teach()
-s1.set_age(-10)
-t1.set_age(30)
+# s1=Student("Nischal", 19, "Bachelor 1st year")
+# t1=Teacher("Norman",22,"Programing")
+# print(s1)
+# s1.study("Mathematices")
+# print(t1)
+# t1.teach()
+# s1.set_age(-10)
+# t1.set_age(30)
+
+persons=[Student("Nischal", 19,"Bachelor 1st year"),
+         Teacher("Norman",22,"Programing")
+         ]
+
+for person in persons:
+    print(person)
+    person.action()
