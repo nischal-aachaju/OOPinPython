@@ -37,18 +37,32 @@ class Member:
         if book.is_available():
             self.__borrowed_books.append(book)
             book.borrow()
-            print(f"{book.author} is successfully Booked by {self.name}")
+            print(f"{book.title} is successfully Booked by {self.name}")
         else:
-            print(f"{book.author} is already Booked")
+            print(f"{book.title} is already Booked")
     
+    def return_book(self,book):
+        book.return_book()
+        self.__borrowed_books.remove(book)
+        print(f"{book.title} is returned by {self.name}")
     
+    def get_borrowed_books(self):
+        return f"{[book.title for book in self.__borrowed_books] if self.__borrowed_books else "no books"}"
     def __str__(self):
-        return f"{self.name} borrowed {[book.title for book in self.__borrowed_books]}"
+        return f"{self.name} borrowed {[book.title for book in self.__borrowed_books] if self.__borrowed_books else "no books"}"
 
 # b1=Book("Muna Madan", "Laxmi parshad Devokta",121)
+# b2=Book("Shiris Ko Phool","Parijat",111)
 # print(b1)
+# print(b2)
 # m1=Member("Nischal",121)
 # print(m1)
 # m1.borrow_book(b1)
-# print(m1)
+# m1.borrow_book(b2)
+# print(m1.get_borrowed_books())
 # print(b1)
+# print(b2)
+# m1.return_book(b1)
+# print(m1.get_borrowed_book())
+# print(b1)
+# print(b2)
